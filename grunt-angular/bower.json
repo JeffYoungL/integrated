@@ -1,0 +1,25 @@
+{
+  "name": "grunt-angular",
+  "description": "",
+  "main": "",
+  "authors": [
+    "liyj31 <liyj31@lenovo.com>"
+  ],
+  "license": "MIT",
+  "homepage": "index.html",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "requirejs": "^2.2.0",
+    "angular": "angularjs#^1.5.8",
+    "angular-route": "^1.5.8",
+    "angular-loader": "^1.5.8",
+    "angular-mocks": "^1.5.8",
+    "requirejs-domready": "~2.0.1"
+  }
+}
