@@ -13,7 +13,7 @@ requirejs.config({
         routerModule: "router/module",
 
         boot2ng: "js/boot2ng",
-        app: "js/app.js"
+        app: "js/app"
 
     },
     shim: {
@@ -23,5 +23,5 @@ requirejs.config({
             exports: 'ui-router'
         }
     },
-    deps: ['boot']
+    deps: ['boot2ng']
 });
