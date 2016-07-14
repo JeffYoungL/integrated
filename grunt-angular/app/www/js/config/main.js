@@ -4,13 +4,16 @@
 requirejs.config({
     baseUrl: ".",
     paths: {
-        domReady: 'lib/requirejs-domready/domReady',
+        domReady: "lib/requirejs-domready/domReady",
         angular: "lib/angular/angular",
-        "ui-router": "lib/angular-route/angular-route",
+        uiRouter: "lib/angular-ui-router/angular-ui-router",
 
-        controllerModule: "controller/module",
-        directiveModule: "directive/module",
-        routerModule: "router/module",
+        controllerModule: "js/controller/module",
+        directiveModule: "js/directive/module",
+        routerModule: "js/router/module",
+        filterModule: "js/filter/module",
+
+        router: "js/router/router",
 
         boot2ng: "js/boot2ng",
         app: "js/app"
@@ -18,9 +21,9 @@ requirejs.config({
     },
     shim: {
         angular: { exports: "angular" },
-        "ui-router": {
+        uiRouter: {
             deps:['angular'],
-            exports: 'ui-router'
+            exports: 'uiRouter'
         }
     },
     deps: ['boot2ng']

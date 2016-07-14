@@ -1,4 +1,5 @@
 require(['routerModule'], function(routerModule) {
+    console.log('init router...');
     routerModule.config([
         '$logProvider',
         '$stateProvider',
@@ -10,16 +11,13 @@ require(['routerModule'], function(routerModule) {
             $urlRouterProvider.otherwise('home');
             $stateProvider
                 .state('home', {
-                    url: '/(home)?',
-                    'homeController',
-                    template: '<p>This is home page.</p>',
-                    resolve: function(){
-
-                    }
+                    url: '/',
+                    //controller: 'homeController',
+                    template: '<p>This is home page.</p>'
                 })
                 .state('local', {
                     url: '/local',
-                    'localController',
+                    //controller: 'localController',
                     template: '<p>This is local page</p>'
                 });
         }]);
