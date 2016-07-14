@@ -1,6 +1,8 @@
 require(['routerModule'], function(routerModule) {
     console.log('start config router...');
-    routerModule.config([
+    routerModule.config(['', function () {
+
+    }]).config([
         '$logProvider',
         '$stateProvider',
         '$urlRouterProvider',
@@ -13,12 +15,17 @@ require(['routerModule'], function(routerModule) {
             $stateProvider
                 .state('home', {
                     url: '/home',
-                    controller: 'homeController',
+                    controller: 'HomeController',
                     template: '<p>This is home page.</p>',
                     resolve: {
-                        loadCtrl: function () {
-                            
-                        }
+                        loadCtrl: ['$q', function ($q) {
+                            console.log('lazy load controller...');
+                            var defered = $q.defer();
+                            require(['homeController'], function () {
+                                defered.resolve();
+                            });
+                            return defered.promise;
+                        }]
                     }
                 })
                 .state('local', {

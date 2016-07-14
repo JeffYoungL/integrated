@@ -2,7 +2,7 @@
  * Created by lyj on 7/14/16.
  */
 define(['controllerModule'], function(controllerModule) {
-    controllerModule.controller('HomeController', [
+    controllerModule.register.controller('HomeController', [
         '$scope'
     ],
     function ($scope) {
