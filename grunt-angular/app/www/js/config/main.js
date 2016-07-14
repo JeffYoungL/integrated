@@ -1,6 +1,10 @@
 /**
  * Created by Lyj on 2016/7/6.
  */
+/**
+ * ui-router v0.3.1 has some problems with angular v1.5.8-build,
+ * so changed ui-router to v0.2.18, angular to v1.5.7
+ */
 requirejs.config({
     baseUrl: ".",
     paths: {

@@ -9,5 +9,7 @@ require(['angular', 'app'], function(angular) {
     require(['domReady!'], function(document){
         console.log('boot 2 angular...');
         angular.bootstrap(document, ['TheOne']);
+
+        console.log('boot finished...');
     });
 });

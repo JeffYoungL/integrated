@@ -3,5 +3,5 @@
  */
 define(['angular'], function(angular) {
     'use strict';
-    angular.module('app.directive', []);
+    return angular.module('app.directive', []);
 });

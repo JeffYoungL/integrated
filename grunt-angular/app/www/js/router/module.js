@@ -1,7 +1,7 @@
 /**
  * Created by Lyj on 2016/7/13.
  */
-define(['angular', 'uiRouter'], function(angular) {
+define(['angular', 'uiRouter'], function(angular, uiRouter) {
     'use strict';
-    angular.module("app.router", ['ui.router']);
+    return angular.module("app.router", ['ui.router']);
 });

@@ -3,5 +3,5 @@
  */
 define(['angular'], function(angular) {
     'use strict';
-    angular.module('app.filter', []);
+    return angular.module('app.filter', []);
 });

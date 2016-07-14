@@ -1,17 +1,18 @@
 require(['routerModule'], function(routerModule) {
-    console.log('init router...');
+    console.log('start config router...');
     routerModule.config([
         '$logProvider',
         '$stateProvider',
         '$urlRouterProvider',
         function($logProvider, $stateProvider, $urlRouterProvider){
             //enable logger
+            console.log('enable debug');
             $logProvider.debugEnabled(true);
 
             $urlRouterProvider.otherwise('home');
             $stateProvider
                 .state('home', {
-                    url: '/',
+                    url: '/home',
                     //controller: 'homeController',
                     template: '<p>This is home page.</p>'
                 })
@@ -20,5 +21,8 @@ require(['routerModule'], function(routerModule) {
                     //controller: 'localController',
                     template: '<p>This is local page</p>'
                 });
+            console.log('callback finised.');
         }]);
+
+    console.log('config finished...');
 });
