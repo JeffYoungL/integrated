@@ -19,6 +19,8 @@ requirejs.config({
 
         router: "js/router/router",
 
+        homeController: 'js/controller/homeController',
+
         boot2ng: "js/boot2ng",
         app: "js/app"
 

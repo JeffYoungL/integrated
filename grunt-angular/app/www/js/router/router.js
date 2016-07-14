@@ -13,8 +13,13 @@ require(['routerModule'], function(routerModule) {
             $stateProvider
                 .state('home', {
                     url: '/home',
-                    //controller: 'homeController',
-                    template: '<p>This is home page.</p>'
+                    controller: 'homeController',
+                    template: '<p>This is home page.</p>',
+                    resolve: {
+                        loadCtrl: function () {
+                            
+                        }
+                    }
                 })
                 .state('local', {
                     url: '/local',
