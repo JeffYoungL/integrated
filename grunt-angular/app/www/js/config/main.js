@@ -17,9 +17,11 @@ requirejs.config({
         routerModule: "js/router/module",
         filterModule: "js/filter/module",
 
+        depsResolver: "js/service/depsResolver",
         router: "js/router/router",
 
-        homeController: 'js/controller/homeController',
+        homeController: "js/controller/homeController",
+        localController: "js/controller/localController",
 
         boot2ng: "js/boot2ng",
         app: "js/app"

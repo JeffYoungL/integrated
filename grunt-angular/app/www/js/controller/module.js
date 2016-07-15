@@ -1,7 +1,14 @@
 /**
  * Created by Lyj on 2016/7/6.
  */
-define(['angular'], function(angular) {
+define(['angular'], function (angular) {
     'use strict';
-    return angular.module('app.controller', []);
+    var controllerModule = angular.module('app.controller', []);
+    controllerModule.config(function ($controllerProvider) {
+        controllerModule.register = {
+            controller: $controllerProvider.register
+        };
+    });
+
+    return controllerModule;
 });

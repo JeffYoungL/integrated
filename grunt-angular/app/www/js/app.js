@@ -11,8 +11,6 @@ define(['angular', 'routerModule', 'controllerModule', 'directiveModule', 'filte
     var yy = xx;
 
     yy.push('a');
-    console.error('xx', xx);
-
 
     return angular.module('TheOne', [
         'app.router',

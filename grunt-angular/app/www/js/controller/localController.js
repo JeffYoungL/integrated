@@ -3,11 +3,11 @@
  */
 define(['controllerModule'], function (controllerModule) {
     console.log('creating controller provider...');
-    controllerModule.register.controller('HomeController', ['$scope', function ($scope) {
+    controllerModule.register.controller('LocalController', ['$scope', function ($scope) {
 
-            console.log('creating HomeController');
+            console.log('creating LocalController');
             $scope.userInfo = {
-                userName: 'tom@lgd.com',
+                userName: 'Jim@wcg.com',
                 password: '****'
             };
         }]);

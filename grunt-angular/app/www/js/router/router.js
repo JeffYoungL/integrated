@@ -1,8 +1,6 @@
-require(['routerModule'], function(routerModule) {
+require(['routerModule', 'depsResolver'], function(routerModule, depsResolver) {
     console.log('start config router...');
-    routerModule.config(['', function () {
-
-    }]).config([
+    routerModule.config([
         '$logProvider',
         '$stateProvider',
         '$urlRouterProvider',
@@ -16,8 +14,10 @@ require(['routerModule'], function(routerModule) {
                 .state('home', {
                     url: '/home',
                     controller: 'HomeController',
-                    template: '<p>This is home page.</p>',
-                    resolve: {
+                    template: '<p>This is home page.</p>' +
+                                '<form><label>{{userInfo.userName}}</label>' +
+                                        '<label>{{userInfo.password}}</label></form>',
+                    /*resolve: {
                         loadCtrl: ['$q', function ($q) {
                             console.log('lazy load controller...');
                             var defered = $q.defer();
@@ -26,12 +26,16 @@ require(['routerModule'], function(routerModule) {
                             });
                             return defered.promise;
                         }]
-                    }
+                    }*/
+                    resolve: depsResolver(['homeController'])
                 })
                 .state('local', {
                     url: '/local',
-                    //controller: 'localController',
-                    template: '<p>This is local page</p>'
+                    controller: 'LocalController',
+                    template: '<p>This is local page.</p>' +
+                                '<form><label>{{userInfo.userName}}</label>' +
+                                        '<label>{{userInfo.password}}</label></form>',
+                    resolve: depsResolver(['localController'])
                 });
             console.log('callback finised.');
         }]);
