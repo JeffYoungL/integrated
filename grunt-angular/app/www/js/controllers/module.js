@@ -8,7 +8,15 @@ define(['angular'], function (angular) {
         controllerModule.register = {
             controller: $controllerProvider.register
         };
-    });
+    }).config(function ($provide) {
+        $provide.service('pageService', function () {
+            console.log('init service');
+            return {
+                pageTitle: 'LazyLoad'
+            }
+        });
+    })
+    ;
 
     return controllerModule;
 });

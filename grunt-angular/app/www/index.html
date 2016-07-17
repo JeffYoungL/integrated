@@ -4,13 +4,15 @@
     <meta charset="UTF-8">
     <title>Master-KO</title>
 
+	<script type="text/javascript">
+	    //console.log('contextPath', {{contextPath}});
+	</script>
 </head>
-
 <body>
     <a href="#home">home</a>
     <a href="#local">local</a>
     <div ui-view></div>
     <!-- requirejs -->
-    <script type="text/javascript" src="lib/requirejs/require.js" async data-main="js/config/main.js"></script>
+    <script type="text/javascript" src="{{contextPath}}/lib/requirejs/require.js" async data-main="{{contextPath}}/js/config/main.js"></script>
 </body>
 </html>

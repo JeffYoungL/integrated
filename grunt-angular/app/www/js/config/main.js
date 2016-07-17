@@ -12,16 +12,16 @@ requirejs.config({
         angular: "lib/angular/angular",
         uiRouter: "lib/angular-ui-router/angular-ui-router",
 
-        controllerModule: "js/controller/module",
+        controllerModule: "js/controllers/module",
         directiveModule: "js/directive/module",
         routerModule: "js/router/module",
-        filterModule: "js/filter/module",
+        filterModule: "js/filters/module",
 
         depsResolver: "js/service/depsResolver",
         router: "js/router/router",
 
-        homeController: "js/controller/homeController",
-        localController: "js/controller/localController",
+        homeController: "js/controllers/homeController",
+        localController: "js/controllers/localController",
 
         boot2ng: "js/boot2ng",
         app: "js/app"

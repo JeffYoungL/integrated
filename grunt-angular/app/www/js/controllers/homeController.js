@@ -3,12 +3,15 @@
  */
 define(['controllerModule'], function (controllerModule) {
     console.log('creating controller provider...');
-    controllerModule.register.controller('HomeController', ['$scope', function ($scope) {
+    controllerModule.register.controller('HomeController', [
+        '$scope',
+        'pageService',
+        function ($scope, pageService) {
 
             console.log('creating HomeController');
             $scope.userInfo = {
                 userName: 'tom@lgd.com',
-                password: '****'
+                password: pageService.pageTitle
             };
         }]);
 });
